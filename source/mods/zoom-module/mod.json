@@ -1,0 +1,34 @@
+{
+  "id": "zoom-module",
+  "kind": "native",
+  "version": "0.2.0",
+  "display_name": "Zoom Module",
+  "gameplay": true,
+  "feature_dependencies": [
+    "shop-framework",
+    "equipment-framework",
+    "hints-framework"
+  ],
+  "play_help": [
+    "Buy the Zoom Module in Modded Shop, then assign it in Equipment.",
+    "Select its hotbar slot and hold Z for optical zoom; release restores the view.",
+    "Native shop/equipment integration implemented; gameplay testing deferred."
+  ],
+  "requires_apis": [
+    {
+      "api": "shop-framework.shop",
+      "abi": 1,
+      "min_size": 56
+    },
+    {
+      "api": "equipment-framework.equipment",
+      "abi": 1,
+      "min_size": 32
+    },
+    {
+      "api": "hints-framework.hints",
+      "abi": 1,
+      "min_size": 24
+    }
+  ]
+}
