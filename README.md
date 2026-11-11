@@ -1,5 +1,7 @@
 # Zoom Module
 
+<img src="media/icon.png" alt="Zoom Module icon" width="128" height="128">
+
 Buy the Zoom Module in Modded Shop, then assign it in Equipment.
 
 ## Install
