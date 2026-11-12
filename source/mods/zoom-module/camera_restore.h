@@ -1,6 +1,11 @@
 /* Restore the captured targets before releasing the shared camera lease. */
 static int zoom_restore_state(void *context){
- (void)context;PTR camera=su_get(zoom.camera);int ok=1;
+ (void)context;
+ /* Failed capture is read-only and may retain only an unreleased lease. */
+ if(!zoom.captured)return 1;
+ PTR camera=su_get(zoom.camera);int ok=1;
+ /* A missing rooted target is not a successful Unity destruction observation. */
+ if(!camera)return 0;
  if(!moon_camera_target_alive(su.obj_alive,camera,&ok))return ok;
  void *args[]={&zoom.original};call(zoom.set_fov,camera,args,&ok);return ok;
 }
